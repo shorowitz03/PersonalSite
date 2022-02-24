@@ -13,7 +13,12 @@ function App() {
         <p>Samuel Horowitz</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
+            Like: {count}
+          </button>
+        </p>
+        <p>
+          <button type="button" onClick={() => setCount((count) => count + 1)}>
+            Dislike: {count}
           </button>
         </p>
         <p>
