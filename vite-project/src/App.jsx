@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import logo from './favicon.svg'
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import NavBar from './NavBar';
+import HomeThing from './HomeThing';
 //import logo from './mikey.png'
 import './App.css'
 
@@ -7,44 +10,30 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+    <Router>
     <div className="App">
+    <NavBar />
+
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Samuel Horowitz</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            Like: {count}
-          </button>
-        </p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            Dislike: {count}
-          </button>
-        </p>
-        <p>
-          Wow, this is my first website!
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://www.linkedin.com/in/sam-horowitz/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://github.com/shorowitz03"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-        </p>
+        <Switch>
+        
+        
+          <Route exact path="/">
+            <HomeThing/> 
+            {console.log("Test")}
+          </Route>
+          <Route exact path="/Projects">
+            
+          </Route>
+          <Route exact path="/Contact">
+          </Route>
+        
+        
+        </Switch>
       </header>
     </div>
+    </Router>
   )
 }
 
