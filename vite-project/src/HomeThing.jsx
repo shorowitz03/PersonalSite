@@ -12,7 +12,7 @@ render () {
     return(
        
            <div>
-               <p>type in something
+               <p>Welcome!
                    </p>
            </div>
         
