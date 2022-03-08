@@ -6,11 +6,15 @@ import HomeThing from './HomeThing';
 //import logo from './mikey.png'
 import './App.css'
 import ProjectsThing from './ProjectsThing';
+import ContactThing from './ContactThing';
+import{ init } from '@emailjs/browser';
+init("user_Bb9hTZ6uo7dC6r9wRQF10");
+
 
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
+  return ( 
     <Router>
     <div className="App">
     <NavBar />
@@ -28,6 +32,7 @@ function App() {
             <ProjectsThing/>
           </Route>
           <Route exact path="/Contact">
+            <ContactThing/>
           </Route>
         
         
